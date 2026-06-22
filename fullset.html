@@ -2,15 +2,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>1+2+3 Seater Sofa | ROVENO</title>
+<title>1+2+3 SEATER SOFA</title>
 
 <style>
 
 body{
 margin:0;
-font-family:Arial,sans-serif;
+font-family:Arial;
 background:#f5f2ed;
 }
 
@@ -23,23 +23,14 @@ text-align:center;
 .header a{
 color:white;
 text-decoration:none;
-font-weight:bold;
 font-size:18px;
+font-weight:bold;
 }
 
 .title{
 background:white;
-padding:40px 20px;
+padding:40px;
 text-align:center;
-}
-
-.title h1{
-font-size:42px;
-margin:0;
-}
-
-.title p{
-color:#666;
 }
 
 .product{
@@ -94,30 +85,6 @@ right:30px;
 font-size:60px;
 color:white;
 cursor:pointer;
-z-index:10000;
-}
-
-.footer{
-background:#111;
-color:white;
-text-align:center;
-padding:40px;
-}
-
-@media(max-width:768px){
-
-.product img{
-width:95%;
-}
-
-.title h1{
-font-size:30px;
-}
-
-.btn{
-width:80%;
-}
-
 }
 
 </style>
@@ -131,10 +98,7 @@ width:80%;
 
 <div class="title">
 <h1>1+2+3 SEATER SOFA COLLECTION</h1>
-<p>ROVENO Premium Collection</p>
 </div>
-
-<!-- 333 -->
 
 <div class="product">
 
@@ -142,25 +106,11 @@ width:80%;
 
 <br>
 
-<button class="btn"
-onclick="document.getElementById('popup333').style.display='block'">
+<button class="btn" onclick="open333()">
 VIEW SIZE
 </button>
 
 </div>
-
-<div id="popup333" class="popup">
-
-<span class="close"
-onclick="document.getElementById('popup333').style.display='none'">
-×
-</span>
-
-<img src="CZ333SIZE.png">
-
-</div>
-
-<!-- 360 -->
 
 <div class="product">
 
@@ -168,17 +118,25 @@ onclick="document.getElementById('popup333').style.display='none'">
 
 <br>
 
-<button class="btn"
-onclick="document.getElementById('popup360').style.display='block'">
+<button class="btn" onclick="open360()">
 VIEW SIZE
 </button>
 
 </div>
 
+<div id="popup333" class="popup">
+
+<span class="close" onclick="close333()">
+×
+</span>
+
+<img src="CZ333SIZE.png">
+
+</div>
+
 <div id="popup360" class="popup">
 
-<span class="close"
-onclick="document.getElementById('popup360').style.display='none'">
+<span class="close" onclick="close360()">
 ×
 </span>
 
@@ -186,13 +144,25 @@ onclick="document.getElementById('popup360').style.display='none'">
 
 </div>
 
-<div class="footer">
+<script>
 
-<h2>ROVENO PREMIUM</h2>
+function open333(){
+document.getElementById("popup333").style.display="block";
+}
 
-<p>WhatsApp : +60 14-556 6565</p>
+function close333(){
+document.getElementById("popup333").style.display="none";
+}
 
-</div>
+function open360(){
+document.getElementById("popup360").style.display="block";
+}
+
+function close360(){
+document.getElementById("popup360").style.display="none";
+}
+
+</script>
 
 </body>
 </html>
