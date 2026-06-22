@@ -1,81 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>L Shape Sofa | ROVENO</title>
+<title>L Shape Sofa</title>
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
 body{
-font-family:Arial,sans-serif;
+margin:0;
 background:#f5f2ed;
-}
-
-img{
-width:100%;
-display:block;
+font-family:Arial;
+text-align:center;
 }
 
 .header{
 background:#111;
 padding:20px;
-text-align:center;
 }
 
 .header a{
 color:white;
 text-decoration:none;
 font-weight:bold;
-font-size:18px;
 }
 
 .title{
+padding:40px 20px;
 background:white;
-padding:50px 20px;
-text-align:center;
-}
-
-.title h1{
-font-size:42px;
-margin-bottom:10px;
-}
-
-.title p{
-font-size:18px;
-color:#666;
 }
 
 .product{
 background:white;
+padding:40px 20px;
 margin-bottom:20px;
 }
 
-.footer{
+.product img{
+width:70%;
+max-width:700px;
+margin:auto;
+display:block;
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 30px;
 background:#111;
 color:white;
-text-align:center;
-padding:50px 20px;
-margin-top:20px;
+text-decoration:none;
+border:none;
+border-radius:5px;
+cursor:pointer;
+font-size:16px;
 }
 
-@media(max-width:768px){
-
-.title h1{
-font-size:30px;
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+z-index:9999;
 }
 
+.popup img{
+width:70%;
+max-width:800px;
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+}
+
+.close{
+position:absolute;
+top:20px;
+right:30px;
+font-size:50px;
+color:white;
+cursor:pointer;
 }
 
 </style>
-
 </head>
 
 <body>
@@ -86,70 +97,44 @@ font-size:30px;
 
 <div class="title">
 <h1>L SHAPE SOFA COLLECTION</h1>
-<p>ROVENO Premium Collection</p>
 </div>
+
+<!-- 189 -->
 
 <div class="product">
 
-<img src="189.jpg"
-style="cursor:pointer;"
-onclick="document.getElementById('popup189').style.display='block'">
+<img src="189.jpg">
+
+<br>
+
+<button class="btn"
+onclick="document.getElementById('size189').style.display='block'">
+VIEW SIZE
+</button>
 
 </div>
 
-<div id="popup189"
-style="
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.9);
-z-index:9999;
-">
+<div id="size189" class="popup">
 
-<span
-onclick="document.getElementById('popup189').style.display='none'"
-style="
-position:absolute;
-top:20px;
-right:30px;
-font-size:50px;
-color:white;
-cursor:pointer;
-">
+<span class="close"
+onclick="document.getElementById('size189').style.display='none'">
 ×
 </span>
 
-<img src="CZ189 SIZE.png"
-style="
-max-width:95%;
-max-height:95%;
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-">
+<img src="CZ189 SIZE.png">
 
 </div>
+
+<!-- 202 -->
 
 <div class="product">
 <img src="202.jpg">
 </div>
 
+<!-- 488 -->
+
 <div class="product">
 <img src="488.jpg">
-</div>
-  
-<div class="footer">
-
-<h2>ROVENO PREMIUM</h2>
-
-<br>
-
-<p>WhatsApp : +60 14-556 6565</p>
-
 </div>
 
 </body>
