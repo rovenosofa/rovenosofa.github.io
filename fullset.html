@@ -2,15 +2,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>1+2+3 SEATER SOFA</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1+2+3 Seater Sofa</title>
 
 <style>
 
 body{
 margin:0;
-font-family:Arial;
+font-family:Arial,sans-serif;
 background:#f5f2ed;
 }
 
@@ -29,8 +28,13 @@ font-weight:bold;
 
 .title{
 background:white;
-padding:40px;
+padding:40px 20px;
 text-align:center;
+}
+
+.title h1{
+margin:0;
+font-size:42px;
 }
 
 .product{
@@ -69,13 +73,18 @@ background:rgba(0,0,0,0.95);
 z-index:9999;
 }
 
-.popup img{
-max-width:95%;
-max-height:95%;
+.popup-content{
 position:absolute;
 top:50%;
 left:50%;
 transform:translate(-50%,-50%);
+max-width:95%;
+max-height:95%;
+}
+
+.popup-content img{
+max-width:100%;
+max-height:90vh;
 }
 
 .close{
@@ -87,7 +96,24 @@ color:white;
 cursor:pointer;
 }
 
+@media(max-width:768px){
+
+.product img{
+width:95%;
+}
+
+.title h1{
+font-size:30px;
+}
+
+.btn{
+width:80%;
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
@@ -98,68 +124,86 @@ cursor:pointer;
 
 <div class="title">
 <h1>1+2+3 SEATER SOFA COLLECTION</h1>
+<p>ROVENO Premium Collection</p>
 </div>
+
+<!-- 333 -->
 
 <div class="product">
 
 <img src="333.jpg">
 
-<br>
-
-<button class="btn" onclick="open333()">
+<button class="btn" onclick="openPopup('popup333')">
 VIEW SIZE
 </button>
 
 </div>
+
+<!-- 360 -->
 
 <div class="product">
 
 <img src="360.jpg">
 
-<br>
-
-<button class="btn" onclick="open360()">
+<button class="btn" onclick="openPopup('popup360')">
 VIEW SIZE
 </button>
 
 </div>
 
+<!-- POPUP 333 -->
+
 <div id="popup333" class="popup">
 
-<span class="close" onclick="close333()">
+<span class="close"
+onclick="closePopup('popup333')">
 ×
 </span>
 
+<div class="popup-content">
 <img src="CZ333SIZE.png">
+</div>
 
 </div>
 
+<!-- POPUP 360 -->
+
 <div id="popup360" class="popup">
 
-<span class="close" onclick="close360()">
+<span class="close"
+onclick="closePopup('popup360')">
 ×
 </span>
 
+<div class="popup-content">
 <img src="CZ360SIZE.png">
+</div>
 
 </div>
 
 <script>
 
-function open333(){
-document.getElementById("popup333").style.display="block";
+function openPopup(id){
+document.getElementById(id).style.display="block";
 }
 
-function close333(){
-document.getElementById("popup333").style.display="none";
+function closePopup(id){
+document.getElementById(id).style.display="none";
 }
 
-function open360(){
-document.getElementById("popup360").style.display="block";
+window.onclick=function(event){
+
+let p333=document.getElementById("popup333");
+let p360=document.getElementById("popup360");
+
+if(event.target==p333){
+p333.style.display="none";
 }
 
-function close360(){
-document.getElementById("popup360").style.display="none";
+if(event.target==p360){
+p360.style.display="none";
+}
+
 }
 
 </script>
