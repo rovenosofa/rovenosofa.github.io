@@ -90,7 +90,48 @@ font-size:30px;
 </div>
 
 <div class="product">
-<img src="189.jpg">
+
+<img src="189.jpg"
+style="cursor:pointer;"
+onclick="document.getElementById('popup189').style.display='block'">
+
+</div>
+
+<div id="popup189"
+style="
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+z-index:9999;
+">
+
+<span
+onclick="document.getElementById('popup189').style.display='none'"
+style="
+position:absolute;
+top:20px;
+right:30px;
+font-size:50px;
+color:white;
+cursor:pointer;
+">
+×
+</span>
+
+<img src="CZ189 SIZE.png"
+style="
+max-width:95%;
+max-height:95%;
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+">
+
 </div>
 
 <div class="product">
