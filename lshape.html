@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +8,8 @@
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
 body{
+margin:0;
 font-family:Arial,sans-serif;
 background:#f5f2ed;
 }
@@ -40,35 +35,35 @@ text-align:center;
 
 .title h1{
 font-size:42px;
+margin:0;
 }
 
 .title p{
-margin-top:10px;
 color:#666;
 }
 
 .product{
 background:white;
 padding:40px 20px;
-margin-bottom:20px;
 text-align:center;
+margin-bottom:20px;
 }
 
 .product img{
-width:85%;
-max-width:900px;
-margin:auto;
+width:70%;
+max-width:700px;
 display:block;
+margin:auto;
 }
 
 .btn{
 margin-top:20px;
-padding:14px 35px;
+padding:15px 40px;
 background:#111;
 color:white;
 border:none;
-border-radius:6px;
-font-size:16px;
+border-radius:8px;
+font-size:18px;
 cursor:pointer;
 }
 
@@ -79,13 +74,13 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.9);
+background:rgba(0,0,0,0.95);
 z-index:9999;
 }
 
 .popup img{
-max-width:90%;
-max-height:90%;
+max-width:95%;
+max-height:95%;
 position:absolute;
 top:50%;
 left:50%;
@@ -106,17 +101,21 @@ z-index:10000;
 background:#111;
 color:white;
 text-align:center;
-padding:40px 20px;
+padding:40px;
 }
 
 @media(max-width:768px){
 
 .product img{
-width:95%;
+width:90%;
 }
 
 .title h1{
 font-size:30px;
+}
+
+.btn{
+width:80%;
 }
 
 }
@@ -141,6 +140,8 @@ font-size:30px;
 
 <img src="189.jpg">
 
+<br>
+
 <button class="btn"
 onclick="document.getElementById('popup189').style.display='block'">
 VIEW SIZE
@@ -155,7 +156,7 @@ onclick="document.getElementById('popup189').style.display='none'">
 ×
 </span>
 
-<img src="CZ189SIZE.png">
+<img src="CZ189CSIZE.png">
 
 </div>
 
@@ -164,6 +165,8 @@ onclick="document.getElementById('popup189').style.display='none'">
 <div class="product">
 
 <img src="202.jpg">
+
+<br>
 
 <button class="btn"
 onclick="document.getElementById('popup202').style.display='block'">
@@ -179,7 +182,7 @@ onclick="document.getElementById('popup202').style.display='none'">
 ×
 </span>
 
-<img src="CZ202SIZE.png">
+<img src="CZ202CSIZE.png">
 
 </div>
 
@@ -188,6 +191,8 @@ onclick="document.getElementById('popup202').style.display='none'">
 <div class="product">
 
 <img src="488.jpg">
+
+<br>
 
 <button class="btn"
 onclick="document.getElementById('popup488').style.display='block'">
@@ -203,15 +208,13 @@ onclick="document.getElementById('popup488').style.display='none'">
 ×
 </span>
 
-<img src="CZ488SIZE.png">
+<img src="CZ488CSIZE.png">
 
 </div>
 
 <div class="footer">
 
 <h2>ROVENO PREMIUM</h2>
-
-<br>
 
 <p>WhatsApp : +60 14-556 6565</p>
 
